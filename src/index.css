@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --obsidian: #0a0a0f;
+  --dark-stone: #12121a;
+  --temple-stone: #1a1a2e;
+  --jade: #00d4aa;
+  --jade-dim: #00d4aa33;
+  --gold: #d4a017;
+  --gold-dim: #d4a01733;
+  --teal: #0ff0fc;
+  --teal-dim: #0ff0fc22;
+  --blood-red: #c0392b;
+  --sun-orange: #e67e22;
+  --text-primary: #f0eeeb;
+  --text-secondary: #b8b8b8;
+
+  --glow-jade: 0 0 20px #00d4aa44, 0 0 40px #00d4aa22;
+  --glow-gold: 0 0 20px #d4a01744, 0 0 40px #d4a01722;
+  --glow-teal: 0 0 20px #0ff0fc44, 0 0 40px #0ff0fc22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--obsidian);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-stone);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--jade-dim);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jade);
+}
+
+::selection {
+  background: var(--jade-dim);
+  color: var(--jade);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}

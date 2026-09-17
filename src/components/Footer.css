@@ -1,0 +1,40 @@
+.footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--dark-stone);
+  border-top: 1px solid var(--jade-dim);
+}
+
+.footer__glyphs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer__glyph {
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.footer__glyph:hover {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 4px var(--gold));
+}
+
+.footer__line {
+  width: 60px;
+  height: 1px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(90deg, transparent, var(--jade-dim), transparent);
+}
+
+.footer__text {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
