@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import './Skills.css'
 
 const skills = [
@@ -7,21 +8,37 @@ const skills = [
   { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'Vercel', 'CI/CD', 'Linux'] },
 ]
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.4, delay: i * 0.08 }
+  })
+}
+
 export default function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="section-container">
-        <h2 className="section-title">Skills</h2>
+        <span className="section-label">Skills</span>
         <div className="skills__grid">
-          {skills.map((group) => (
-            <div key={group.category} className="skills__group">
+          {skills.map((group, i) => (
+            <motion.div
+              key={group.category}
+              className="skills__group"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={i}
+            >
               <h3 className="skills__category">{group.category}</h3>
               <ul className="skills__list">
                 {group.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

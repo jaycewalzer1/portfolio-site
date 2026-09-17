@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Mail, ArrowUpRight } from 'lucide-react'
 import './Contact.css'
 
 export default function Contact() {
@@ -17,38 +19,54 @@ export default function Contact() {
   return (
     <section className="contact" id="contact">
       <div className="section-container">
-        <h2 className="section-title">Get in touch</h2>
-        <div className="contact__layout">
-          <form className="contact__form" onSubmit={handleSubmit}>
-            <div className="field">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" value={form.name} onChange={handleChange} required />
-            </div>
-            <div className="field">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" value={form.message} onChange={handleChange} required rows={5} />
-            </div>
-            <button type="submit" className="btn-neutral btn-neutral--filled">
-              Send message
-            </button>
-          </form>
-
-          <div className="contact__aside">
-            <p>
+        <span className="section-label">Contact</span>
+        <motion.div
+          className="contact__layout"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="contact__intro">
+            <h2 className="contact__title">Let's work together</h2>
+            <p className="contact__desc">
               I'm currently looking for new opportunities. Whether you have a
               role in mind or just want to say hello, I'd love to hear from you.
             </p>
+            <a href="mailto:walzerjayce@gmail.com" className="contact__email">
+              <Mail size={16} />
+              walzerjayce@gmail.com
+            </a>
             <div className="contact__links">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://x.com/Jaycewalzer" target="_blank" rel="noopener noreferrer">X</a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                GitHub <ArrowUpRight size={13} />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                LinkedIn <ArrowUpRight size={13} />
+              </a>
+              <a href="https://x.com/Jaycewalzer" target="_blank" rel="noopener noreferrer">
+                X <ArrowUpRight size={13} />
+              </a>
             </div>
           </div>
-        </div>
+          <form className="contact__form" onSubmit={handleSubmit}>
+            <div className="field">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" value={form.name} onChange={handleChange} required placeholder="Your name" />
+            </div>
+            <div className="field">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required placeholder="you@example.com" />
+            </div>
+            <div className="field">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" value={form.message} onChange={handleChange} required rows={5} placeholder="Your message..." />
+            </div>
+            <button type="submit" className="btn btn--primary contact__submit">
+              Send message
+            </button>
+          </form>
+        </motion.div>
       </div>
     </section>
   )

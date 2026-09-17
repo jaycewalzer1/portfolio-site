@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__inner">
-        <a href="#" className="nav__logo">Jayce Walzer</a>
+        <a href="#" className="nav__logo">JW</a>
 
         <button
           className={`nav__burger ${menuOpen ? 'nav__burger--open' : ''}`}

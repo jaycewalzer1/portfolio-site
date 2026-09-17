@@ -1,35 +1,36 @@
 .skills {
-  padding: 6rem 0;
-  background: var(--sand);
+  padding: 7rem 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
 }
 
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .skills__category {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--gold);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--parchment);
+  letter-spacing: 1.5px;
+  color: var(--text-tertiary);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .skills__list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .skills__list li {
   font-size: 0.92rem;
-  color: var(--text);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

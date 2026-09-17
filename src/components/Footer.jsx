@@ -4,11 +4,12 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="section-container footer__inner">
-        <span className="footer__name">Jayce Walzer</span>
-        <span className="footer__sep" aria-hidden="true" />
-        <a href="https://x.com/Jaycewalzer" className="footer__x" target="_blank" rel="noopener noreferrer">@Jaycewalzer</a>
-        <span className="footer__sep" aria-hidden="true" />
-        <span className="footer__copy">&copy; {new Date().getFullYear()}</span>
+        <span className="footer__copy">&copy; {new Date().getFullYear()} Jayce Walzer</span>
+        <div className="footer__links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://x.com/Jaycewalzer" target="_blank" rel="noopener noreferrer">@Jaycewalzer</a>
+        </div>
       </div>
     </footer>
   )

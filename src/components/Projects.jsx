@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+import { ArrowUpRight } from 'lucide-react'
 import './Projects.css'
 
 const projects = [
@@ -31,30 +33,47 @@ const projects = [
   },
 ]
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1, y: 0,
+    transition: { duration: 0.5, delay: i * 0.1 }
+  })
+}
+
 export default function Projects() {
   return (
     <section className="projects" id="projects">
       <div className="section-container">
-        <h2 className="section-title">Work</h2>
-        <div className="projects__grid">
+        <span className="section-label">Selected Work</span>
+        <div className="projects__list">
           {projects.map((project, i) => (
-            <article key={i} className="card">
-              <div className="card__top">
-                <h3 className="card__title">{project.title}</h3>
-                <p className="card__desc">{project.description}</p>
-              </div>
-              <div className="card__bottom">
-                <div className="card__tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="card__tag">{tag}</span>
-                  ))}
+            <motion.article
+              key={i}
+              className="project"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-50px' }}
+              variants={cardVariants}
+              custom={i}
+            >
+              <div className="project__header">
+                <span className="project__number">{String(i + 1).padStart(2, '0')}</span>
+                <div className="project__links">
+                  <a href={project.github} className="project__link">Code</a>
+                  <a href={project.link} className="project__link project__link--demo">
+                    Demo <ArrowUpRight size={14} />
+                  </a>
                 </div>
-                <div className="card__links">
-                  <a href={project.github} className="card__link">Code</a>
-                  <a href={project.link} className="card__link card__link--accent">Demo</a>
-                </div>
               </div>
-            </article>
+              <h3 className="project__title">{project.title}</h3>
+              <p className="project__desc">{project.description}</p>
+              <div className="project__tags">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="project__tag">{tag}</span>
+                ))}
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

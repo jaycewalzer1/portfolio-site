@@ -1,38 +1,41 @@
 .footer {
   padding: 2.5rem 0;
-  border-top: 1px solid var(--parchment);
-  background: var(--sand);
+  border-top: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .footer__inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  font-size: 0.85rem;
-  color: var(--text-light);
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
 }
 
-.footer__name {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  color: var(--brown);
+.footer__copy {
+  font-weight: 500;
 }
 
-.footer__sep {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--clay);
+.footer__links {
+  display: flex;
+  gap: 1.25rem;
 }
 
-.footer__x {
-  color: var(--brown);
+.footer__links a {
+  color: var(--text-tertiary);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
 }
 
-.footer__x:hover {
-  color: var(--dark-teal);
+.footer__links a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 480px) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
 }
