@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Mail, ArrowUpRight } from 'lucide-react'
 import './Contact.css'
 
@@ -20,13 +19,20 @@ export default function Contact() {
     <section className="contact" id="contact">
       <div className="section-container">
         <span className="section-label">Contact</span>
-        <motion.div
-          className="contact__layout"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="glyph-divider" aria-hidden="true">
+          <span className="glyph-divider__line" />
+          <span className="glyph-divider__motif">
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+          </span>
+          <span className="glyph-divider__line" />
+        </div>
+        <div className="contact__layout">
           <div className="contact__intro">
             <h2 className="contact__title">Let's work together</h2>
             <p className="contact__desc">
@@ -66,7 +72,7 @@ export default function Contact() {
               Send message
             </button>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

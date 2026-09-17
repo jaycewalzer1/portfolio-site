@@ -1,12 +1,12 @@
 .skills {
   padding: 7rem 0;
   background: var(--bg);
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 .skills__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 3rem;
 }
 
@@ -15,7 +15,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--text-tertiary);
+  color: var(--gold);
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--border);

@@ -11,12 +11,16 @@
   position: relative;
 }
 
+.hero__glyph {
+  margin-bottom: 1.5rem;
+}
+
 .hero__label {
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
-  color: var(--text-tertiary);
+  color: var(--teal);
   margin-bottom: 1.5rem;
 }
 

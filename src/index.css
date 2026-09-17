@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #fafafa;
-  --bg-alt: #f2f2f2;
+  --bg: #faf8f5;
+  --bg-alt: #f3efe9;
   --surface: #fff;
-  --border: #e5e5e5;
-  --border-hover: #d0d0d0;
-  --text: #1a1a1a;
-  --text-secondary: #666;
-  --text-tertiary: #999;
-  --accent: #1a1a1a;
-  --accent-hover: #333;
-  --highlight: #0066ff;
-  --highlight-soft: rgba(0, 102, 255, 0.08);
+  --border: #e0d9cf;
+  --border-hover: #c8bfb2;
+  --text: #1c1812;
+  --text-secondary: #6b6053;
+  --text-tertiary: #9c9285;
+  --accent: #1c1812;
+  --accent-hover: #3a3226;
+  --teal: #2a7f8a;
+  --teal-soft: rgba(42, 127, 138, 0.08);
+  --gold: #b8942e;
+  --gold-soft: rgba(184, 148, 46, 0.1);
+  --stone: #c8b89a;
 }
 
 * {
@@ -35,7 +38,7 @@ body {
 }
 
 ::selection {
-  background: var(--highlight);
+  background: var(--teal);
   color: #fff;
 }
 
@@ -50,15 +53,39 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--text-tertiary);
+  color: var(--teal);
   margin-bottom: 2rem;
+  display: block;
 }
 
-.section-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.5px;
+/* Mayan stepped fret divider */
+.glyph-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
+
+.glyph-divider__line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.glyph-divider__motif {
+  display: flex;
+  gap: 2px;
+}
+
+.glyph-divider__step {
+  background: var(--stone);
+  opacity: 0.4;
+}
+
+.glyph-divider__step:nth-child(1) { width: 3px; height: 3px; }
+.glyph-divider__step:nth-child(2) { width: 3px; height: 6px; }
+.glyph-divider__step:nth-child(3) { width: 3px; height: 10px; }
+.glyph-divider__step:nth-child(4) { width: 3px; height: 14px; }
+.glyph-divider__step:nth-child(5) { width: 3px; height: 10px; }
+.glyph-divider__step:nth-child(6) { width: 3px; height: 6px; }
+.glyph-divider__step:nth-child(7) { width: 3px; height: 3px; }

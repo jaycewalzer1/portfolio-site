@@ -6,6 +6,24 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="hero__content">
+        <motion.div
+          className="hero__glyph"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          aria-hidden="true"
+        >
+          <svg viewBox="0 0 48 48" width="48" height="48" fill="none">
+            <rect x="18" y="2" width="12" height="3" fill="var(--stone)" opacity="0.5" />
+            <rect x="14" y="5" width="20" height="3" fill="var(--stone)" opacity="0.4" />
+            <rect x="10" y="8" width="28" height="3" fill="var(--stone)" opacity="0.3" />
+            <rect x="17" y="13" width="14" height="14" rx="1" fill="none" stroke="var(--teal)" strokeWidth="1.5" opacity="0.5" />
+            <circle cx="24" cy="20" r="3.5" fill="var(--gold)" opacity="0.45" />
+            <rect x="10" y="31" width="28" height="3" fill="var(--stone)" opacity="0.3" />
+            <rect x="14" y="34" width="20" height="3" fill="var(--stone)" opacity="0.4" />
+            <rect x="18" y="37" width="12" height="3" fill="var(--stone)" opacity="0.5" />
+          </svg>
+        </motion.div>
         <motion.p
           className="hero__label"
           initial={{ opacity: 0, y: 20 }}

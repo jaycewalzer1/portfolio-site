@@ -1,21 +1,25 @@
-import { motion } from 'framer-motion'
 import './About.css'
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 0.5, delay: i * 0.1 }
-  })
-}
 
 export default function About() {
   return (
     <section className="about" id="about">
       <div className="section-container">
-        <motion.span className="section-label" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>About</motion.span>
+        <span className="section-label">About</span>
+        <div className="glyph-divider" aria-hidden="true">
+          <span className="glyph-divider__line" />
+          <span className="glyph-divider__motif">
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+          </span>
+          <span className="glyph-divider__line" />
+        </div>
         <div className="about__body">
-          <motion.div className="about__text" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1}>
+          <div className="about__text">
             <p>
               I got into programming by breaking things and figuring out how to
               put them back together. These days I do that professionally —
@@ -28,8 +32,8 @@ export default function About() {
               users actually want. Currently looking for a team where I can
               contribute meaningfully and keep growing.
             </p>
-          </motion.div>
-          <motion.aside className="about__details" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2}>
+          </div>
+          <aside className="about__details">
             <div className="about__detail">
               <span className="about__detail-label">Focus</span>
               <span>Full-stack web development</span>
@@ -42,7 +46,7 @@ export default function About() {
               <span className="about__detail-label">Experience</span>
               <span>3+ years building for the web</span>
             </div>
-          </motion.aside>
+          </aside>
         </div>
       </div>
     </section>

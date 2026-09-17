@@ -1,7 +1,7 @@
 .about {
   padding: 7rem 0;
   background: var(--bg);
-  border-top: 1px solid var(--border);
+  border-top: none;
 }
 
 .about__body {
@@ -43,7 +43,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--text-tertiary);
+  color: var(--gold);
 }
 
 @media (max-width: 768px) {

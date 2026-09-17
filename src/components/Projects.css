@@ -20,7 +20,7 @@
 }
 
 .project:hover {
-  background: var(--highlight-soft);
+  background: var(--teal-soft);
 }
 
 .project__header {
@@ -34,7 +34,7 @@
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--text-tertiary);
+  color: var(--stone);
   letter-spacing: 1px;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .project__link--demo {
-  color: var(--highlight);
+  color: var(--teal);
 }
 
 .project__link--demo:hover {

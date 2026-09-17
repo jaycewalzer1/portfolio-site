@@ -46,6 +46,19 @@ export default function Projects() {
     <section className="projects" id="projects">
       <div className="section-container">
         <span className="section-label">Selected Work</span>
+        <div className="glyph-divider" aria-hidden="true">
+          <span className="glyph-divider__line" />
+          <span className="glyph-divider__motif">
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+            <span className="glyph-divider__step" />
+          </span>
+          <span className="glyph-divider__line" />
+        </div>
         <div className="projects__list">
           {projects.map((project, i) => (
             <motion.article
