@@ -10,94 +10,42 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const mailto = `mailto:your.email@example.com?subject=Portfolio Contact from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${encodeURIComponent(form.email)}`
+    const mailto = `mailto:walzerjayce@gmail.com?subject=Contact from ${encodeURIComponent(form.name)}&body=${encodeURIComponent(form.message)}%0A%0AFrom: ${encodeURIComponent(form.email)}`
     window.location.href = mailto
   }
 
   return (
     <section className="contact" id="contact">
       <div className="section-container">
-        <div className="contact__header">
-          <span className="contact__glyph">{'\u2721'}</span>
-          <h2 className="contact__title">Transmit</h2>
-          <div className="contact__divider" />
-          <p className="contact__subtitle">
-            Ready to build something extraordinary? Let's connect.
-          </p>
-        </div>
-
-        <div className="contact__grid">
+        <h2 className="section-title">Get in touch</h2>
+        <div className="contact__layout">
           <form className="contact__form" onSubmit={handleSubmit}>
-            <div className="contact__field">
-              <label className="contact__label" htmlFor="name">Designation</label>
-              <input
-                className="contact__input"
-                type="text"
-                id="name"
-                name="name"
-                value={form.name}
-                onChange={handleChange}
-                required
-                placeholder="Your name"
-              />
+            <div className="field">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" name="name" value={form.name} onChange={handleChange} required />
             </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor="email">Signal Frequency</label>
-              <input
-                className="contact__input"
-                type="email"
-                id="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-                placeholder="your@email.com"
-              />
+            <div className="field">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" name="email" value={form.email} onChange={handleChange} required />
             </div>
-
-            <div className="contact__field">
-              <label className="contact__label" htmlFor="message">Transmission</label>
-              <textarea
-                className="contact__input contact__textarea"
-                id="message"
-                name="message"
-                value={form.message}
-                onChange={handleChange}
-                required
-                placeholder="Your message..."
-                rows={5}
-              />
+            <div className="field">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" name="message" value={form.message} onChange={handleChange} required rows={5} />
             </div>
-
-            <button type="submit" className="contact__submit">
-              <span className="contact__submit-glyph">{'\u2736'}</span>
-              Send Transmission
+            <button type="submit" className="btn-neutral btn-neutral--filled">
+              Send message
             </button>
           </form>
 
-          <div className="contact__info">
-            <div className="contact__info-block">
-              <h3 className="contact__info-title">Location</h3>
-              <p className="contact__info-text">Available Remotely</p>
-            </div>
-            <div className="contact__info-block">
-              <h3 className="contact__info-title">Links</h3>
-              <div className="contact__links">
-                <a href="https://github.com/" className="contact__ext-link" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-                <a href="https://linkedin.com/" className="contact__ext-link" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-              </div>
-            </div>
-            <div className="contact__info-block">
-              <h3 className="contact__info-title">Status</h3>
-              <div className="contact__status">
-                <span className="contact__status-dot" />
-                Open to Opportunities
-              </div>
+          <div className="contact__aside">
+            <p>
+              I'm currently looking for new opportunities. Whether you have a
+              role in mind or just want to say hello, I'd love to hear from you.
+            </p>
+            <div className="contact__links">
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://x.com/Jaycewalzer" target="_blank" rel="noopener noreferrer">X</a>
             </div>
           </div>
         </div>

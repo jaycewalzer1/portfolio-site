@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
 
-const glyphSymbols = ['\u2721', '\u2726', '\u2736', '\u2737']
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
@@ -15,36 +13,28 @@ export default function Navbar() {
 
   const links = [
     { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'Work', href: '#projects' },
     { label: 'Skills', href: '#skills' },
     { label: 'Contact', href: '#contact' },
   ]
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__inner">
-        <a href="#" className="navbar__logo">
-          <span className="navbar__glyph">{glyphSymbols[0]}</span>
-          <span className="navbar__name">JW</span>
-        </a>
+    <nav className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+      <div className="nav__inner">
+        <a href="#" className="nav__logo">Jayce Walzer</a>
 
         <button
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+          className={`nav__burger ${menuOpen ? 'nav__burger--open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
           <span /><span /><span />
         </button>
 
-        <ul className={`navbar__links ${menuOpen ? 'navbar__links--open' : ''}`}>
-          {links.map((link, i) => (
+        <ul className={`nav__links ${menuOpen ? 'nav__links--open' : ''}`}>
+          {links.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                className="navbar__link"
-                onClick={() => setMenuOpen(false)}
-              >
-                <span className="navbar__link-glyph">{glyphSymbols[i]}</span>
+              <a href={link.href} onClick={() => setMenuOpen(false)}>
                 {link.label}
               </a>
             </li>

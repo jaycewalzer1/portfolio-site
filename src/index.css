@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-  --obsidian: #0a0a0f;
-  --dark-stone: #12121a;
-  --temple-stone: #1a1a2e;
-  --jade: #00d4aa;
-  --jade-dim: #00d4aa33;
-  --gold: #d4a017;
-  --gold-dim: #d4a01733;
-  --teal: #0ff0fc;
-  --teal-dim: #0ff0fc22;
-  --blood-red: #c0392b;
-  --sun-orange: #e67e22;
-  --text-primary: #f0eeeb;
-  --text-secondary: #b8b8b8;
-
-  --glow-jade: 0 0 20px #00d4aa44, 0 0 40px #00d4aa22;
-  --glow-gold: 0 0 20px #d4a01744, 0 0 40px #d4a01722;
-  --glow-teal: 0 0 20px #0ff0fc44, 0 0 40px #0ff0fc22;
+  --sand: #faf6f0;
+  --warm-white: #fffdf9;
+  --parchment: #f0e8da;
+  --clay: #d4c4a8;
+  --brown: #8b7355;
+  --dark-brown: #5c4a32;
+  --bark: #3d2e1c;
+  --gold: #b8942e;
+  --dark-gold: #8a6d1b;
+  --leaf: #4a7c59;
+  --dark-leaf: #2d5a3a;
+  --teal: #2a7f8a;
+  --dark-teal: #1d5c64;
+  --text: #3d2e1c;
+  --text-light: #7a6b57;
 }
 
 * {
@@ -31,34 +29,19 @@ html {
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
-  background-color: var(--obsidian);
-  color: var(--text-primary);
-  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: var(--warm-white);
+  color: var(--text);
   line-height: 1.6;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--dark-stone);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--jade-dim);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--jade);
-}
-
-::selection {
-  background: var(--jade-dim);
-  color: var(--jade);
-}
-
 .section-container {
-  max-width: 1200px;
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+}
+
+section, footer {
+  position: relative;
+  z-index: 1;
 }

@@ -1,213 +1,115 @@
 .hero {
-  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: radial-gradient(ellipse at 50% 50%, #1a1a2e 0%, #0a0a0f 70%);
-}
-
-.hero__canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+  gap: 4rem;
+  position: relative;
   z-index: 1;
 }
 
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(0, 212, 170, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(212, 160, 23, 0.06) 0%, transparent 50%);
-  z-index: 2;
-}
-
 .hero__content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  padding: 2rem;
+  max-width: 560px;
 }
 
-/* Orbiting glyphs */
-.hero__glyph-ring {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 2rem;
-  animation: ringRotate 30s linear infinite;
-}
-
-.hero__orbiting-glyph {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 1.4rem;
-  color: var(--gold);
-  opacity: 0.4;
-  filter: drop-shadow(0 0 4px var(--gold));
-  transform:
-    translate(-50%, -50%)
-    rotate(calc(360deg / var(--total) * var(--i)))
-    translateY(-90px)
-    rotate(calc(-360deg / var(--total) * var(--i)));
-  animation: glyphFloat 4s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.5s);
-}
-
-.hero__subtitle {
-  font-family: 'Orbitron', monospace;
+.hero__intro {
   font-size: 0.85rem;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  color: var(--jade);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-.hero__line {
-  display: inline-block;
-  width: 40px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--jade), transparent);
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
 }
 
 .hero__title {
-  font-family: 'Orbitron', monospace;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 900;
-  letter-spacing: 4px;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--bark);
+  margin-bottom: 1.25rem;
 }
 
-.hero__title-accent {
-  background: linear-gradient(135deg, var(--jade), var(--teal), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero__role {
-  font-family: 'Orbitron', monospace;
+.hero__desc {
   font-size: 1.1rem;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.2rem;
-  text-shadow: var(--glow-gold);
-}
-
-.hero__tagline {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  max-width: 550px;
-  margin: 0 auto 2.5rem;
+  color: var(--text-light);
   line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 440px;
 }
 
-.hero__cta-group {
+.hero__actions {
   display: flex;
-  gap: 1.2rem;
-  justify-content: center;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
-.hero__cta {
-  font-family: 'Orbitron', monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 0.9rem 2rem;
-  border: 1px solid;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.hero__cta--primary {
-  background: var(--jade);
-  color: var(--obsidian);
-  border-color: var(--jade);
-  box-shadow: var(--glow-jade);
-}
-
-.hero__cta--primary:hover {
-  background: transparent;
-  color: var(--jade);
-  box-shadow: var(--glow-jade), inset 0 0 20px var(--jade-dim);
-}
-
-.hero__cta--secondary {
-  background: transparent;
-  color: var(--gold);
-  border-color: var(--gold-dim);
-}
-
-.hero__cta--secondary:hover {
-  border-color: var(--gold);
-  box-shadow: var(--glow-gold);
-}
-
-/* Scroll indicator */
-.hero__scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
+/* Neutral buttons */
+.btn-neutral {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--text-secondary);
-  font-family: 'Orbitron', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  animation: scrollBounce 2s ease-in-out infinite;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.7rem 1.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--clay);
+  background: transparent;
+  color: var(--brown);
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 
-.hero__scroll-glyph {
-  font-size: 1.2rem;
-  color: var(--jade);
-  opacity: 0.5;
+.btn-neutral:hover {
+  border-color: var(--brown);
+  color: var(--bark);
+  background: rgba(61, 46, 28, 0.03);
 }
 
-@keyframes ringRotate {
-  to { transform: rotate(360deg); }
+.btn-neutral--filled {
+  background: var(--bark);
+  color: var(--sand);
+  border-color: var(--bark);
 }
 
-@keyframes glyphFloat {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
+.btn-neutral--filled:hover {
+  background: var(--dark-brown);
+  border-color: var(--dark-brown);
+  color: #fff;
 }
 
-@keyframes scrollBounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+/* Mayan figure */
+.hero__ornament {
+  flex-shrink: 0;
+}
+
+.hero__figure {
+  width: 280px;
+  height: 440px;
 }
 
 @media (max-width: 768px) {
-  .hero__glyph-ring {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1.5rem;
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 5rem;
   }
-  .hero__orbiting-glyph {
-    transform:
-      translate(-50%, -50%)
-      rotate(calc(360deg / var(--total) * var(--i)))
-      translateY(-65px)
-      rotate(calc(-360deg / var(--total) * var(--i)));
+
+  .hero__desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__figure {
+    width: 200px;
+    height: 320px;
   }
 }

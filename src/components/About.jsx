@@ -4,49 +4,37 @@ export default function About() {
   return (
     <section className="about" id="about">
       <div className="section-container">
-        <div className="about__header">
-          <span className="about__glyph">{'\u2726'}</span>
-          <h2 className="about__title">About Me</h2>
-          <div className="about__divider" />
-        </div>
-
-        <div className="about__grid">
+        <h2 className="section-title">About</h2>
+        <div className="about__body">
           <div className="about__text">
             <p>
-              I'm a passionate full-stack developer who thrives on building
-              elegant, performant web applications. With a deep appreciation for
-              both clean code architecture and striking visual design, I craft
-              digital experiences that are as robust under the hood as they are
-              beautiful on the surface.
+              I got into programming by breaking things and figuring out how to
+              put them back together. These days I do that professionally —
+              building full-stack applications from database schemas to pixel-perfect
+              interfaces.
             </p>
             <p>
-              My approach blends modern frameworks and cutting-edge tooling with
-              timeless design principles &mdash; merging the precision of
-              technology with the artistry of ancient civilizations.
+              I care about writing code that other people can read, maintaining
+              systems that don't page you at 3 AM, and shipping features that
+              users actually want. Currently looking for a team where I can
+              contribute meaningfully and keep growing.
             </p>
           </div>
-
-          <div className="about__stats">
-            {[
-              { value: '3+', label: 'Years Experience' },
-              { value: '15+', label: 'Projects Built' },
-              { value: '5+', label: 'Technologies' },
-              { value: '100%', label: 'Passion' },
-            ].map((stat) => (
-              <div key={stat.label} className="about__stat">
-                <span className="about__stat-value">{stat.value}</span>
-                <span className="about__stat-label">{stat.label}</span>
-              </div>
-            ))}
-          </div>
+          <aside className="about__details">
+            <div className="about__detail">
+              <span className="about__detail-label">Focus</span>
+              <span>Full-stack web development</span>
+            </div>
+            <div className="about__detail">
+              <span className="about__detail-label">Location</span>
+              <span>Remote / flexible</span>
+            </div>
+            <div className="about__detail">
+              <span className="about__detail-label">Experience</span>
+              <span>3+ years building for the web</span>
+            </div>
+          </aside>
         </div>
-      </div>
-
-      {/* Decorative temple border */}
-      <div className="about__temple-border">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <span key={i} className="about__temple-block" />
-        ))}
       </div>
     </section>
   )
